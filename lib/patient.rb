@@ -24,6 +24,5 @@ class Patient
 
   def doctors
     Appointment.all.select { |appt| appt.doctor if appt.patient == self }
-
   end
 end
