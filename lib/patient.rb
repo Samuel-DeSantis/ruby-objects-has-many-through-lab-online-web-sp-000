@@ -23,7 +23,7 @@ class Patient
   end
 
   def doctors
-    docs = Appointment.all.select { |appt| appt.doctor if appt.patient == self }
-    docs.doctor
+    Appointment.all.select { |appt| appt.doctor if appt.patient == self }
+
   end
 end
