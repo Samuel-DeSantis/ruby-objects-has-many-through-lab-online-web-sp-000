@@ -23,6 +23,6 @@ class Patient
   end
 
   def doctors
-    appointments.select { |appt| appt.doctor }
+    appointments.map(&:doctor)
   end
 end
