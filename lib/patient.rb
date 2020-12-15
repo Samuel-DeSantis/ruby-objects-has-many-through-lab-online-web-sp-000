@@ -23,6 +23,6 @@ class Patient
   end
 
   def doctors
-    Appointment.all.select { |appt| appt.patient }
+    appointments.select { |appt| appt.doctor }
   end
 end
