@@ -16,10 +16,6 @@ class Doctor
     @@all
   end
 
-  def patients
-    appointments.map(&:patients)
-  end
-
   def new_appointment(date, patient)
     Appointment.new(date, patient, self)
   end
@@ -28,4 +24,7 @@ class Doctor
     Appointment.all.select { |appt| appt.doctor == self }
   end
 
+  def patients
+    appointments.map(&:patients)
+  end
 end
